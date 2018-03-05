@@ -16,8 +16,16 @@ default: &default
   port: <%= ENV["#{db_service}_SERVICE_PORT"] %>
   database: <%= ENV["POSTGRESQL_DATABASE"] %>
 
+local_development:
+  <<: *default
+
 development:
   <<: *default
+  database: 'debtchain'
+  username: 'postgres'
+  password: 'Pa$w0rD'
+  host: ''
+  port: 5432
 
 test:
   adapter: sqlite3
