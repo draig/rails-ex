@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  #auth methods
+  post 'auth/send_sms'
+  post 'auth/verify_code'
+
   get 'welcome/index'
   root 'welcome#index'
   resources :articles do

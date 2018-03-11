@@ -24,7 +24,7 @@ development:
   database: 'debtchain'
   username: 'postgres'
   password: 'Pa$w0rD'
-  host: ''
+  host: 'localhost'
   port: 5432
 
 test:
